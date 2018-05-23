@@ -4,6 +4,10 @@ class ParitySpec extends WordSpec with MustMatchers {
 
   "Parity" must {
 
+    "Handle an empty list" in {
+      Parity.calculate(Nil) mustEqual 0
+    }
+
     "Accept a list of ints and return an int" in {
       Parity.calculate(List(1)) mustEqual 1
     }
