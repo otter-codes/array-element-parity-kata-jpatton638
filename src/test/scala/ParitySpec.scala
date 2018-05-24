@@ -16,10 +16,15 @@ class ParitySpec extends WordSpec with MustMatchers {
       Parity.calculate(List(1,1,2,2,3)) mustEqual 3
     }
 
+    // There is no assert on this test?
     "Handle negative numbers" in {
       Parity.calculate(List(-2, -1, 1, 2))
     }
 
+    "Return the unique int" in {
+      Parity.calculate(List(1,-1,2,-2,3,3)) mustEqual 3
+    }
+    
   }
 
 }
